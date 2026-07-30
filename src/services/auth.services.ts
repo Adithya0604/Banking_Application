@@ -4,7 +4,6 @@ import {
   CreatedCustomer,
 } from "../repositories/user.repository";
 import { RegisterUserInput } from "../schemas/auth.schema";
-import { memoryUsage } from "node:process";
 
 export class DuplicateUserError extends Error {
   constructor(message: string) {
@@ -14,15 +13,15 @@ export class DuplicateUserError extends Error {
 }
 
 export class AuthServices {
-  private userRepository = UserRepository;
+  private userRepository: UserRepository;
   constructor() {
     this.userRepository = new UserRepository();
   }
 
   async registerUser(input: RegisterUserInput): Promise<CreatedCustomer> {
     const istaken = await this.userRepository.existsByEmailOrPhone(
-      input.phone,
       input.email,
+      input.phone,
     );
 
     if (istaken) {

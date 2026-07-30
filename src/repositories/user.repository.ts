@@ -26,9 +26,12 @@ export class UserRepository {
     const client = await db.connect();
 
     try {
+      await client.query("BEGIN");
+
       //Insert Into Customers
       const InsertQuery = `Insert into Customers(email, phone, first_name, last_name, status)
-    Values($1, $2, $3, $4, 'PENDING_KYC')`;
+      Values($1, $2, $3, $4, 'PENDING_KYC')
+      RETURNING id, email, first_name, last_name, status, created_at`;
       const InsertRes = await client.query(InsertQuery, [
         input.email,
         input.phone,
@@ -37,6 +40,7 @@ export class UserRepository {
       ]);
 
       const Customer = InsertRes.rows[0];
+      console.log(Customer);
 
       //Insert Customer Credentinals
       const PassCodeQuery = `Insert into customer_credentials(customer_id, password_hash) Values($1, $2)`;
@@ -63,7 +67,7 @@ export class UserRepository {
         firstname: Customer.first_name,
         lastname: Customer.last_name,
         status: Customer.status,
-        createdAt: Customer.Created_at,
+        createdAt: Customer.created_at,
       };
     } catch (error) {
       await client.query("ROLLBACK");
