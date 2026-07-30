@@ -4,17 +4,20 @@ import { z } from "zod";
 //*** We are using Zod which is very clear and then exporting the Object.***/
 export const RegisterUserSchema = z.object({
   body: z.object({
-    firstName: z.string().min(1, "First name is required"),
-    lastName: z.string().min(1, "Last name is required"),
+    firstName: z.string().min(3, "First name is required"),
+    lastName: z.string().min(3, "Last name is required"),
     email: z.email("email is required"),
     phone: z.string().min(10, "phone number is required"),
     password: z.string().min(8, "password is required"),
     address: z.object({
-      streetLine1: z.string().min(1, "Address is required"),
+      streetLine1: z
+        .string()
+        .min(8, "Address is required")
+        .max(250, "Limit Exceded"),
       streetLine2: z.string().optional(),
-      city: z.string().min(1, "city name is required"),
-      state: z.string().min(1, "state name is required"),
-      postalCode: z.string().min(1, "postalCode name is required"),
+      city: z.string().min(3, "city name is required"),
+      state: z.string().min(3, "state name is required"),
+      postalCode: z.string().min(6, "postalCode name is required"),
       country: z.string().default("India"),
     }),
   }),
