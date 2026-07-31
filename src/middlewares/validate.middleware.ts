@@ -9,11 +9,12 @@ export const validate = (scheme: ZodObject) => {
     next: NextFunction,
   ): Promise<void> => {
     try {
-      await scheme.parseAsync({
-        body: req.body,
-        query: req.query,
-        params: req.params,
-      });
+      // await scheme.parseAsync({
+      //   body: req.body,
+      //   query: req.query,
+      //   params: req.params,
+      // });
+      req.body = await scheme.parseAsync(req.body);
       next();
     } catch (error) {
       if (error instanceof ZodError) {

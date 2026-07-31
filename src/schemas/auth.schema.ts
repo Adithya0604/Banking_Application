@@ -8,7 +8,10 @@ export const RegisterUserSchema = z.object({
     lastName: z.string().min(3, "Last name is required"),
     email: z.email("email is required"),
     phone: z.string().min(10, "phone number is required"),
-    password: z.string().min(8, "password is required"),
+    password: z
+      .string()
+      .min(8, "password is required")
+      .max(16, "LIMIT Exceded"),
     address: z.object({
       streetLine1: z
         .string()
