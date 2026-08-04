@@ -1,19 +1,19 @@
+import "dotenv/config";
 import argon2 from "argon2";
 import jwt from "jsonwebtoken";
 import { LoginRepository } from "../repositories/login.repository";
 import { LoginUserInput } from "../schemas/login.schema";
-import "dotenv/config";
 
 //If User Status is SUSPENDED OR PENDING_VERIFICATION
 export class AccountRestricted extends Error {
-  constructor(message = "Invalid email or password combination.") {
+  constructor(message = "Your account is currently suspended or restricted. ") {
     super(message);
     this.name = "ACCOUNT_RESTRICTED";
   }
 }
 //Wrong Email/Phone & password Combination
 export class InvalidCredentials extends Error {
-  constructor(message = "Your account is currently suspended or restricted.") {
+  constructor(message = "Invalid email or password combination.") {
     super(message);
     this.name = "INVALID_CREDENTIALS";
   }
@@ -36,7 +36,7 @@ export class LoginServices {
       throw new InvalidCredentials();
     }
 
-    if (user.Status === "SUSPENDED" || user.Status === "BLOCKED") {
+    if (user.status === "SUSPENDED" || user.status === "BLOCKED") {
       throw new AccountRestricted();
     }
 
@@ -52,9 +52,9 @@ export class LoginServices {
       {
         sub: user.id,
         email: user.email,
-        status: user.Status,
+        status: user.status,
       },
-      process.env.JWT_SECRET,
+      process.env.JWT_SECRET!,
       { expiresIn: "15m" },
     );
 
@@ -62,7 +62,7 @@ export class LoginServices {
       {
         sub: user.id,
       },
-      process.env.JWT_SECRET,
+      process.env.JWT_SECRET!,
       { expiresIn: "4d" },
     );
 
@@ -76,9 +76,9 @@ export class LoginServices {
       user: {
         id: user.id,
         email: user.email,
-        firstname: user.firstname,
-        lastname: user.lastname,
-        status: user.Status,
+        firstname: user.first_name,
+        lastname: user.last_name,
+        status: user.status,
       },
     };
   }

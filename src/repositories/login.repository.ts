@@ -4,10 +4,10 @@ import { LoginUserInput } from "../schemas/login.schema";
 export interface UserDetails {
   id: string;
   email: string;
-  firstname: string;
-  lastname: string;
+  first_name: string;
+  last_name: string;
   password_hash: string;
-  Status: string;
+  status: string;
 }
 
 export class LoginRepository {
@@ -27,15 +27,16 @@ export class LoginRepository {
     ]);
 
     if (results.rows.length === 0) return null;
+    return results.rows[0] as UserDetails;
 
-    const row = results.rows[0];
-    return {
-      id: row.ID,
-      email: row.Email,
-      firstname: row.Firstname,
-      lastname: row.lastname,
-      password_hash: row.password_hash,
-      Status: row.status,
-    };
+    //const row = results.rows[0];
+    // return {
+    //   id: row.ID,
+    //   email: row.Email,
+    //   firstname: row.Firstname,
+    //   lastname: row.lastname,
+    //   password_hash: row.password_hash,
+    //   Status: row.status,
+    // };
   }
 }

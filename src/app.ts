@@ -106,7 +106,7 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
     success: false,
     error: {
       code: "INTERNAL_SERVER_ERROR",
-      message: "AN UNEXPECTED ERROR OCCURRED ON THE SERVER.",
+      message: err.message || "AN UNEXPECTED ERROR OCCURRED ON THE SERVER.",
     },
   });
 });

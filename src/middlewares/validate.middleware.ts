@@ -19,9 +19,12 @@ export const validate = (scheme: ZodObject) => {
     } catch (error) {
       if (error instanceof ZodError) {
         const formattedErrors = error.issues.map((err) => ({
-          field: err.path.slice(1).join("."),
+          field: err.path.join("."),
           message: err.message,
         }));
+
+        console.log("formattedErrors:-", formattedErrors);
+        console.log("Errors inside:-", error);
 
         res.status(400).json({
           success: false,
