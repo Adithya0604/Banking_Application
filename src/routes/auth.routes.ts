@@ -4,6 +4,7 @@ import { validate } from "../middlewares/validate.middleware";
 import { RegisterUserSchema } from "../schemas/auth.schema";
 import { LoginUserSchema } from "../schemas/login.schema";
 import { LoginController } from "../controllers/login.controller";
+import { autenticate } from "../middlewares/auth.middleware";
 
 const router = Router();
 const authController = new AuthController();
