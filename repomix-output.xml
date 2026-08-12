@@ -1,0 +1,2373 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: node_modules/**, dist/**, .git/**
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+Banking_Application/
+  .git/
+    hooks/
+      applypatch-msg.sample
+      commit-msg.sample
+      fsmonitor-watchman.sample
+      post-update.sample
+      pre-applypatch.sample
+      pre-commit.sample
+      pre-merge-commit.sample
+      pre-push.sample
+      pre-rebase.sample
+      pre-receive.sample
+      prepare-commit-msg.sample
+      push-to-checkout.sample
+      sendemail-validate.sample
+      update.sample
+    info/
+      exclude
+    logs/
+      refs/
+        heads/
+          main
+        remotes/
+          origin/
+            HEAD
+            main
+      HEAD
+    objects/
+      02/
+        85cb208c19eebb65ec4f8ec1df5b4f7b2dc408
+      0b/
+        c5192ff843579f1f797b348792b35ef082cdca
+      0d/
+        5ed71bfc97a28b9ee22b1f603241d721bd5701
+      0f/
+        0a6c0c2ef68aff68bac161a0dc8615cc0ae6e0
+      10/
+        7b2f131cf9511b275d16284ebe5f075729c117
+      13/
+        83742e754a9cb0c541431cf19a3ef507f3a461
+      17/
+        676fc1dbc80a29c0eaa9a5a896d09f015b917b
+      1a/
+        e689a546c3dc354943b07d67e3d60121bbd61f
+      1b/
+        0f65c41d3530f98cc36a415d54772860114f20
+        1b472cdb444dec8b5c56f415a5c681a5eec23a
+        2ce62272532afd2903460040fbb665ac0dd33e
+      20/
+        02b8e4a5df0658d7262d134591c072803d4fe3
+      22/
+        300891abff2fd1b3f0af7dba3622e1c099e138
+      26/
+        142b101c24b4de2c55d9128595b426ffe858de
+      2a/
+        58bdecce9c28defc9a29234d3ded967d77e7ee
+      2d/
+        bd20787ba63630a82b8f8b17ed8a12d1866cc5
+      32/
+        e81d5d523ed40aaa206282b4369c59e6887464
+      36/
+        907c83c0a60a8e930d0b6be300fcb79edbba0b
+        f1f27aa833e2391074ff9076b96ef626625070
+      3b/
+        543fdd3ddcae445808e457de5bb2d547bd1c30
+      3e/
+        9310c06ed4578f2ae08c0e8e73167a2f8c2d47
+      40/
+        178044aeaff0ea1470aa4c759b685671e09ede
+      42/
+        66c4aec387fb23e901a72e33fd4fc69509912f
+      43/
+        2196ebe03e9514ed2870999fc35dcff329547f
+      44/
+        8e1625a063dfbdb673e84f286d54ee35dbfbcc
+      46/
+        50d77d5e770298997f5c0ec6f9dbb91cd937a2
+      48/
+        f799c0d1bf3295209ddfa0256ee3fe87c44007
+      4e/
+        a3cc66101db5221e2bb13bf4e69957384b6efd
+      4f/
+        814b3e904428105ac8753e174f4083e37e12a3
+      53/
+        2a3907c02028048e99f5c7b5803793b9b68c6e
+      57/
+        15ea39e3ac4810cdfd184e4f495e5abb030646
+      59/
+        69362afa7a4ae2fbbeea534fc671f1a48d2561
+      5d/
+        f0200eb20dc2218f137671b00ab70a19fe7137
+      5f/
+        674a03cce95e23bcb3f19c09b27faac45deeb2
+      60/
+        e5d2e5e1a49698ef8b19580f35b4299208e3df
+      6a/
+        c27fd57e31e55314bf277ae8bb2c72d4ebbb7c
+      6c/
+        6b5d582f86cfd137c432e210ff72f4a969a00b
+        cff2be9a632989d656c9a7d653aace7ebbafa8
+      6f/
+        f171ade2d0c45ae2215d029bbcc59e5072ac7a
+      73/
+        4fd634b9a246a8c9a710a23941902384ff4980
+        939e8a82c03827c0a4251317b72bdb9cb5a537
+      78/
+        3da6a93848f47f46781e508c68da628ca890da
+      79/
+        041af01e9385e4b6ef24a9a0e6cf87483d28c4
+      7d/
+        951437a9fc6cad13ac91c73e286c94ae728bc9
+      82/
+        f3b01164e0d88ccf545b769d1a612d196c8a78
+      84/
+        0b2b6f99de0652f9ace7fdce46c62e8f3bb521
+      86/
+        022acc27ae2810571b85d3a424caca344ce72e
+      89/
+        6ac39c52fa7fd24cb1fe138d130ffd763dc0e7
+      8c/
+        bd6ef0d66afb60b9a3e376fe9c04283acc9b83
+      8d/
+        d41cbe3ac5e04ff98156daa9abfd0db3a51528
+      8e/
+        1ccd3a50756b74a14901a845455b23a309ce27
+        d116c734031b053f9ee1e3dd96a89f4cd0368a
+      9d/
+        806197f96df01d30694b8967905437995f0c00
+      a2/
+        99082843abc23ac8de9e540a0a9fe1045badf5
+      a3/
+        26f48f6065ec4c78bd98e9599f0ea8d1137e73
+        cfe8e96353091cddd0274d7181ba60049183c7
+      a5/
+        7077867e35357c45511ae8ac5409c708df2ccd
+      ab/
+        dd9b3e4cb618d14426f17e757070051952f51e
+      ac/
+        7f0beeb5091137b4925cb4e7b5efc33fb1c0ea
+      ad/
+        5d1942f5f803381b98b78d0cb2f8176974a72e
+      b0/
+        47ed51a9f27d70716e129e64e80e3c76766bc7
+      b3/
+        06a6fbd4744f992f018c2ec1c0094460d12330
+      b4/
+        aa8fa561552df5386ea5821e0b33567c3e8630
+      b8/
+        e8098adac159a0033500e01c8805109e6ee72e
+      ba/
+        ff2f205adb3ff0b6455f67a6da049ec7a4fb8f
+      c2/
+        097fbad7ce43d6dd65eb3e6cc45d100b4a9d17
+      c5/
+        8be68e62eab44213ec088678e745e6d952d679
+        dbf4e2c1f0a6c20e08001869746cc584679891
+      c6/
+        8d2bd2bb7e9a1cc54a9c51e0ced70787179480
+      c7/
+        de0ee7e0dff06964585bbf7640e9d1533e9bd8
+      ca/
+        3035f0d9a7044f90ed2a85984afa8a61370bc2
+      cb/
+        e84cc2f49addead9066545a8068082f0980851
+      cc/
+        eb23ca4302e97c5304e1eaf45082bcbdad3e45
+      ce/
+        4c6596580970a94c6c79659304dbe16f510844
+        6b999b74a1624a3675fa654b0c9b7f62a2e706
+      cf/
+        1442d23a9a5e7e866dab0068384e323d29e020
+      d0/
+        307e2c57b7603f9e60e73c6f6732f6cd2a2038
+      d3/
+        772d01025702303d77c7cf6a52c64d0bfcef45
+        ed112b9adc6e28339559460daf3f9dee33a421
+      d8/
+        652aea03cfa9a3ab2ed906d450e96beee44f8b
+      db/
+        51a50773824f118b7768fa7ef344ebd2f134b4
+      df/
+        7ff9667eded2d0a0f18753b15429379b2a6422
+      e6/
+        9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+      e8/
+        575af979c780a867b546e2fa9d4e35b792bdfb
+      ea/
+        aa778c9d5f87120ebb1a5b073eedd12696b826
+      eb/
+        ada23ba07a912754e34ef2407f4fefea3a22b1
+      ee/
+        3048cfc62926e60e4cd9026081a73b7682bcc5
+      f1/
+        4da2709b658b12234321bf805ed887cf19301b
+      f7/
+        12e6ccd5958ff18923bb0e22b4d89b80119935
+      pack/
+        pack-e7fd44897037c096e68b75f4558cc74d85b67b21.idx
+        pack-e7fd44897037c096e68b75f4558cc74d85b67b21.pack
+        pack-e7fd44897037c096e68b75f4558cc74d85b67b21.rev
+    refs/
+      heads/
+        main
+      remotes/
+        origin/
+          HEAD
+          main
+    config
+    description
+    FETCH_HEAD
+    HEAD
+    index
+    packed-refs
+  LICENSE
+  README.md
+src/
+  config/
+    database.ts
+  controllers/
+    auth.controller.ts
+    login.controller.ts
+  middlewares/
+    auth.middleware.ts
+    validate.middleware.ts
+  migration/
+    001_phase1_schema.sql
+    002_phase2_schema.sql
+  repositories/
+    login.repository.ts
+    user.repository.ts
+  routes/
+    auth.routes.ts
+  schemas/
+    auth.schema.ts
+    login.schema.ts
+  services/
+    auth.services.ts
+    login.services.ts
+  app.ts
+.dockerignore
+.env.example
+.gitignore
+docker-compose.yml
+Dockerfile
+package.json
+README.md
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="Banking_Application/.git/hooks/applypatch-msg.sample">
+#!/bin/sh
+#
+# An example hook script to check the commit log message taken by
+# applypatch from an e-mail message.
+#
+# The hook should exit with non-zero status after issuing an
+# appropriate message if it wants to stop the commit.  The hook is
+# allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "applypatch-msg".
+
+. git-sh-setup
+commitmsg="$(git rev-parse --git-path hooks/commit-msg)"
+test -x "$commitmsg" && exec "$commitmsg" ${1+"$@"}
+:
+</file>
+
+<file path="Banking_Application/.git/hooks/commit-msg.sample">
+#!/bin/sh
+#
+# An example hook script to check the commit log message.
+# Called by "git commit" with one argument, the name of the file
+# that has the commit message.  The hook should exit with non-zero
+# status after issuing an appropriate message if it wants to stop the
+# commit.  The hook is allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "commit-msg".
+
+# Uncomment the below to add a Signed-off-by line to the message.
+# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+# hook is more suited to it.
+#
+# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+
+# This example catches duplicate Signed-off-by lines.
+
+test "" = "$(grep '^Signed-off-by: ' "$1" |
+	 sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
+	echo >&2 Duplicate Signed-off-by lines.
+	exit 1
+}
+</file>
+
+<file path="Banking_Application/.git/hooks/fsmonitor-watchman.sample">
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use IPC::Open2;
+
+# An example hook script to integrate Watchman
+# (https://facebook.github.io/watchman/) with git to speed up detecting
+# new and modified files.
+#
+# The hook is passed a version (currently 2) and last update token
+# formatted as a string and outputs to stdout a new update token and
+# all files that have been modified since the update token. Paths must
+# be relative to the root of the working tree and separated by a single NUL.
+#
+# To enable this hook, rename this file to "query-watchman" and set
+# 'git config core.fsmonitor .git/hooks/query-watchman'
+#
+my ($version, $last_update_token) = @ARGV;
+
+# Uncomment for debugging
+# print STDERR "$0 $version $last_update_token\n";
+
+# Check the hook interface version
+if ($version ne 2) {
+	die "Unsupported query-fsmonitor hook version '$version'.\n" .
+	    "Falling back to scanning...\n";
+}
+
+my $git_work_tree = get_working_dir();
+
+my $retry = 1;
+
+my $json_pkg;
+eval {
+	require JSON::XS;
+	$json_pkg = "JSON::XS";
+	1;
+} or do {
+	require JSON::PP;
+	$json_pkg = "JSON::PP";
+};
+
+launch_watchman();
+
+sub launch_watchman {
+	my $o = watchman_query();
+	if (is_work_tree_watched($o)) {
+		output_result($o->{clock}, @{$o->{files}});
+	}
+}
+
+sub output_result {
+	my ($clockid, @files) = @_;
+
+	# Uncomment for debugging watchman output
+	# open (my $fh, ">", ".git/watchman-output.out");
+	# binmode $fh, ":utf8";
+	# print $fh "$clockid\n@files\n";
+	# close $fh;
+
+	binmode STDOUT, ":utf8";
+	print $clockid;
+	print "\0";
+	local $, = "\0";
+	print @files;
+}
+
+sub watchman_clock {
+	my $response = qx/watchman clock "$git_work_tree"/;
+	die "Failed to get clock id on '$git_work_tree'.\n" .
+		"Falling back to scanning...\n" if $? != 0;
+
+	return $json_pkg->new->utf8->decode($response);
+}
+
+sub watchman_query {
+	my $pid = open2(\*CHLD_OUT, \*CHLD_IN, 'watchman -j --no-pretty')
+	or die "open2() failed: $!\n" .
+	"Falling back to scanning...\n";
+
+	# In the query expression below we're asking for names of files that
+	# changed since $last_update_token but not from the .git folder.
+	#
+	# To accomplish this, we're using the "since" generator to use the
+	# recency index to select candidate nodes and "fields" to limit the
+	# output to file names only. Then we're using the "expression" term to
+	# further constrain the results.
+	my $last_update_line = "";
+	if (substr($last_update_token, 0, 1) eq "c") {
+		$last_update_token = "\"$last_update_token\"";
+		$last_update_line = qq[\n"since": $last_update_token,];
+	}
+	my $query = <<"	END";
+		["query", "$git_work_tree", {$last_update_line
+			"fields": ["name"],
+			"expression": ["not", ["dirname", ".git"]]
+		}]
+	END
+
+	# Uncomment for debugging the watchman query
+	# open (my $fh, ">", ".git/watchman-query.json");
+	# print $fh $query;
+	# close $fh;
+
+	print CHLD_IN $query;
+	close CHLD_IN;
+	my $response = do {local $/; <CHLD_OUT>};
+
+	# Uncomment for debugging the watch response
+	# open ($fh, ">", ".git/watchman-response.json");
+	# print $fh $response;
+	# close $fh;
+
+	die "Watchman: command returned no output.\n" .
+	"Falling back to scanning...\n" if $response eq "";
+	die "Watchman: command returned invalid output: $response\n" .
+	"Falling back to scanning...\n" unless $response =~ /^\{/;
+
+	return $json_pkg->new->utf8->decode($response);
+}
+
+sub is_work_tree_watched {
+	my ($output) = @_;
+	my $error = $output->{error};
+	if ($retry > 0 and $error and $error =~ m/unable to resolve root .* directory (.*) is not watched/) {
+		$retry--;
+		my $response = qx/watchman watch "$git_work_tree"/;
+		die "Failed to make watchman watch '$git_work_tree'.\n" .
+		    "Falling back to scanning...\n" if $? != 0;
+		$output = $json_pkg->new->utf8->decode($response);
+		$error = $output->{error};
+		die "Watchman: $error.\n" .
+		"Falling back to scanning...\n" if $error;
+
+		# Uncomment for debugging watchman output
+		# open (my $fh, ">", ".git/watchman-output.out");
+		# close $fh;
+
+		# Watchman will always return all files on the first query so
+		# return the fast "everything is dirty" flag to git and do the
+		# Watchman query just to get it over with now so we won't pay
+		# the cost in git to look up each individual file.
+		my $o = watchman_clock();
+		$error = $output->{error};
+
+		die "Watchman: $error.\n" .
+		"Falling back to scanning...\n" if $error;
+
+		output_result($o->{clock}, ("/"));
+		$last_update_token = $o->{clock};
+
+		eval { launch_watchman() };
+		return 0;
+	}
+
+	die "Watchman: $error.\n" .
+	"Falling back to scanning...\n" if $error;
+
+	return 1;
+}
+
+sub get_working_dir {
+	my $working_dir;
+	if ($^O =~ 'msys' || $^O =~ 'cygwin') {
+		$working_dir = Win32::GetCwd();
+		$working_dir =~ tr/\\/\//;
+	} else {
+		require Cwd;
+		$working_dir = Cwd::cwd();
+	}
+
+	return $working_dir;
+}
+</file>
+
+<file path="Banking_Application/.git/hooks/post-update.sample">
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+exec git update-server-info
+</file>
+
+<file path="Banking_Application/.git/hooks/pre-applypatch.sample">
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed
+# by applypatch from an e-mail message.
+#
+# The hook should exit with non-zero status after issuing an
+# appropriate message if it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-applypatch".
+
+. git-sh-setup
+precommit="$(git rev-parse --git-path hooks/pre-commit)"
+test -x "$precommit" && exec "$precommit" ${1+"$@"}
+:
+</file>
+
+<file path="Banking_Application/.git/hooks/pre-commit.sample">
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=$(git hash-object -t tree /dev/null)
+fi
+
+# If you want to allow non-ASCII filenames set this variable to true.
+allownonascii=$(git config --type=bool hooks.allownonascii)
+
+# Redirect output to stderr.
+exec 1>&2
+
+# Cross platform projects tend to avoid non-ASCII filenames; prevent
+# them from being added to the repository. We exploit the fact that the
+# printable range starts at the space character and ends with tilde.
+if [ "$allownonascii" != "true" ] &&
+	# Note that the use of brackets around a tr range is ok here, (it's
+	# even required, for portability to Solaris 10's /usr/bin/tr), since
+	# the square bracket bytes happen to fall in the designated range.
+	test $(git diff-index --cached --name-only --diff-filter=A -z $against |
+	  LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
+then
+	cat <<\EOF
+Error: Attempt to add a non-ASCII file name.
+
+This can cause problems if you want to work with people on other platforms.
+
+To be portable it is advisable to rename the file.
+
+If you know what you are doing you can disable this check using:
+
+  git config hooks.allownonascii true
+EOF
+	exit 1
+fi
+
+# If there are whitespace errors, print the offending file names and fail.
+exec git diff-index --check --cached $against --
+</file>
+
+<file path="Banking_Application/.git/hooks/pre-merge-commit.sample">
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git merge" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message to
+# stderr if it wants to stop the merge commit.
+#
+# To enable this hook, rename this file to "pre-merge-commit".
+
+. git-sh-setup
+test -x "$GIT_DIR/hooks/pre-commit" &&
+        exec "$GIT_DIR/hooks/pre-commit"
+:
+</file>
+
+<file path="Banking_Application/.git/hooks/pre-push.sample">
+#!/bin/sh
+
+# An example hook script to verify what is about to be pushed.  Called by "git
+# push" after it has checked the remote status, but before anything has been
+# pushed.  If this script exits with a non-zero status nothing will be pushed.
+#
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+#
+# Information about the commits which are being pushed is supplied as lines to
+# the standard input in the form:
+#
+#   <local ref> <local oid> <remote ref> <remote oid>
+#
+# This sample shows how to prevent push of commits where the log message starts
+# with "WIP" (work in progress).
+
+remote="$1"
+url="$2"
+
+zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
+
+while read local_ref local_oid remote_ref remote_oid
+do
+	if test "$local_oid" = "$zero"
+	then
+		# Handle delete
+		:
+	else
+		if test "$remote_oid" = "$zero"
+		then
+			# New branch, examine all commits
+			range="$local_oid"
+		else
+			# Update to existing branch, examine new commits
+			range="$remote_oid..$local_oid"
+		fi
+
+		# Check for WIP commit
+		commit=$(git rev-list -n 1 --grep '^WIP' "$range")
+		if test -n "$commit"
+		then
+			echo >&2 "Found WIP commit in $local_ref, not pushing"
+			exit 1
+		fi
+	fi
+done
+
+exit 0
+</file>
+
+<file path="Banking_Application/.git/hooks/pre-rebase.sample">
+#!/bin/sh
+#
+# Copyright (c) 2006, 2008 Junio C Hamano
+#
+# The "pre-rebase" hook is run just before "git rebase" starts doing
+# its job, and can prevent the command from running by exiting with
+# non-zero status.
+#
+# The hook is called with the following parameters:
+#
+# $1 -- the upstream the series was forked from.
+# $2 -- the branch being rebased (or empty when rebasing the current branch).
+#
+# This sample shows how to prevent topic branches that are already
+# merged to 'next' branch from getting rebased, because allowing it
+# would result in rebasing already published history.
+
+publish=next
+basebranch="$1"
+if test "$#" = 2
+then
+	topic="refs/heads/$2"
+else
+	topic=`git symbolic-ref HEAD` ||
+	exit 0 ;# we do not interrupt rebasing detached HEAD
+fi
+
+case "$topic" in
+refs/heads/??/*)
+	;;
+*)
+	exit 0 ;# we do not interrupt others.
+	;;
+esac
+
+# Now we are dealing with a topic branch being rebased
+# on top of master.  Is it OK to rebase it?
+
+# Does the topic really exist?
+git show-ref -q "$topic" || {
+	echo >&2 "No such branch $topic"
+	exit 1
+}
+
+# Is topic fully merged to master?
+not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
+if test -z "$not_in_master"
+then
+	echo >&2 "$topic is fully merged to master; better remove it."
+	exit 1 ;# we could allow it, but there is no point.
+fi
+
+# Is topic ever merged to next?  If so you should not be rebasing it.
+only_next_1=`git rev-list ^master "^$topic" ${publish} | sort`
+only_next_2=`git rev-list ^master           ${publish} | sort`
+if test "$only_next_1" = "$only_next_2"
+then
+	not_in_topic=`git rev-list "^$topic" master`
+	if test -z "$not_in_topic"
+	then
+		echo >&2 "$topic is already up to date with master"
+		exit 1 ;# we could allow it, but there is no point.
+	else
+		exit 0
+	fi
+else
+	not_in_next=`git rev-list --pretty=oneline ^${publish} "$topic"`
+	/usr/bin/perl -e '
+		my $topic = $ARGV[0];
+		my $msg = "* $topic has commits already merged to public branch:\n";
+		my (%not_in_next) = map {
+			/^([0-9a-f]+) /;
+			($1 => 1);
+		} split(/\n/, $ARGV[1]);
+		for my $elem (map {
+				/^([0-9a-f]+) (.*)$/;
+				[$1 => $2];
+			} split(/\n/, $ARGV[2])) {
+			if (!exists $not_in_next{$elem->[0]}) {
+				if ($msg) {
+					print STDERR $msg;
+					undef $msg;
+				}
+				print STDERR " $elem->[1]\n";
+			}
+		}
+	' "$topic" "$not_in_next" "$not_in_master"
+	exit 1
+fi
+
+<<\DOC_END
+
+This sample hook safeguards topic branches that have been
+published from being rewound.
+
+The workflow assumed here is:
+
+ * Once a topic branch forks from "master", "master" is never
+   merged into it again (either directly or indirectly).
+
+ * Once a topic branch is fully cooked and merged into "master",
+   it is deleted.  If you need to build on top of it to correct
+   earlier mistakes, a new topic branch is created by forking at
+   the tip of the "master".  This is not strictly necessary, but
+   it makes it easier to keep your history simple.
+
+ * Whenever you need to test or publish your changes to topic
+   branches, merge them into "next" branch.
+
+The script, being an example, hardcodes the publish branch name
+to be "next", but it is trivial to make it configurable via
+$GIT_DIR/config mechanism.
+
+With this workflow, you would want to know:
+
+(1) ... if a topic branch has ever been merged to "next".  Young
+    topic branches can have stupid mistakes you would rather
+    clean up before publishing, and things that have not been
+    merged into other branches can be easily rebased without
+    affecting other people.  But once it is published, you would
+    not want to rewind it.
+
+(2) ... if a topic branch has been fully merged to "master".
+    Then you can delete it.  More importantly, you should not
+    build on top of it -- other people may already want to
+    change things related to the topic as patches against your
+    "master", so if you need further changes, it is better to
+    fork the topic (perhaps with the same name) afresh from the
+    tip of "master".
+
+Let's look at this example:
+
+		   o---o---o---o---o---o---o---o---o---o "next"
+		  /       /           /           /
+		 /   a---a---b A     /           /
+		/   /               /           /
+	       /   /   c---c---c---c B         /
+	      /   /   /             \         /
+	     /   /   /   b---b C     \       /
+	    /   /   /   /             \     /
+    ---o---o---o---o---o---o---o---o---o---o---o "master"
+
+
+A, B and C are topic branches.
+
+ * A has one fix since it was merged up to "next".
+
+ * B has finished.  It has been fully merged up to "master" and "next",
+   and is ready to be deleted.
+
+ * C has not merged to "next" at all.
+
+We would want to allow C to be rebased, refuse A, and encourage
+B to be deleted.
+
+To compute (1):
+
+	git rev-list ^master ^topic next
+	git rev-list ^master        next
+
+	if these match, topic has not merged in next at all.
+
+To compute (2):
+
+	git rev-list master..topic
+
+	if this is empty, it is fully merged to "master".
+
+DOC_END
+</file>
+
+<file path="Banking_Application/.git/hooks/pre-receive.sample">
+#!/bin/sh
+#
+# An example hook script to make use of push options.
+# The example simply echoes all push options that start with 'echoback='
+# and rejects all pushes when the "reject" push option is used.
+#
+# To enable this hook, rename this file to "pre-receive".
+
+if test -n "$GIT_PUSH_OPTION_COUNT"
+then
+	i=0
+	while test "$i" -lt "$GIT_PUSH_OPTION_COUNT"
+	do
+		eval "value=\$GIT_PUSH_OPTION_$i"
+		case "$value" in
+		echoback=*)
+			echo "echo from the pre-receive-hook: ${value#*=}" >&2
+			;;
+		reject)
+			exit 1
+		esac
+		i=$((i + 1))
+	done
+fi
+</file>
+
+<file path="Banking_Application/.git/hooks/prepare-commit-msg.sample">
+#!/bin/sh
+#
+# An example hook script to prepare the commit log message.
+# Called by "git commit" with the name of the file that has the
+# commit message, followed by the description of the commit
+# message's source.  The hook's purpose is to edit the commit
+# message file.  If the hook fails with a non-zero status,
+# the commit is aborted.
+#
+# To enable this hook, rename this file to "prepare-commit-msg".
+
+# This hook includes three examples. The first one removes the
+# "# Please enter the commit message..." help message.
+#
+# The second includes the output of "git diff --name-status -r"
+# into the message, just before the "git status" output.  It is
+# commented because it doesn't cope with --amend or with squashed
+# commits.
+#
+# The third example adds a Signed-off-by line to the message, that can
+# still be edited.  This is rarely a good idea.
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+
+# case "$COMMIT_SOURCE,$SHA1" in
+#  ,|template,)
+#    /usr/bin/perl -i.bak -pe '
+#       print "\n" . `git diff --cached --name-status -r`
+# 	 if /^#/ && $first++ == 0' "$COMMIT_MSG_FILE" ;;
+#  *) ;;
+# esac
+
+# SOB=$(git var GIT_COMMITTER_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
+# if test -z "$COMMIT_SOURCE"
+# then
+#   /usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+# fi
+</file>
+
+<file path="Banking_Application/.git/hooks/push-to-checkout.sample">
+#!/bin/sh
+
+# An example hook script to update a checked-out tree on a git push.
+#
+# This hook is invoked by git-receive-pack(1) when it reacts to git
+# push and updates reference(s) in its repository, and when the push
+# tries to update the branch that is currently checked out and the
+# receive.denyCurrentBranch configuration variable is set to
+# updateInstead.
+#
+# By default, such a push is refused if the working tree and the index
+# of the remote repository has any difference from the currently
+# checked out commit; when both the working tree and the index match
+# the current commit, they are updated to match the newly pushed tip
+# of the branch. This hook is to be used to override the default
+# behaviour; however the code below reimplements the default behaviour
+# as a starting point for convenient modification.
+#
+# The hook receives the commit with which the tip of the current
+# branch is going to be updated:
+commit=$1
+
+# It can exit with a non-zero status to refuse the push (when it does
+# so, it must not modify the index or the working tree).
+die () {
+	echo >&2 "$*"
+	exit 1
+}
+
+# Or it can make any necessary changes to the working tree and to the
+# index to bring them to the desired state when the tip of the current
+# branch is updated to the new commit, and exit with a zero status.
+#
+# For example, the hook can simply run git read-tree -u -m HEAD "$1"
+# in order to emulate git fetch that is run in the reverse direction
+# with git push, as the two-tree form of git read-tree -u -m is
+# essentially the same as git switch or git checkout that switches
+# branches while keeping the local changes in the working tree that do
+# not interfere with the difference between the branches.
+
+# The below is a more-or-less exact translation to shell of the C code
+# for the default behaviour for git's push-to-checkout hook defined in
+# the push_to_deploy() function in builtin/receive-pack.c.
+#
+# Note that the hook will be executed from the repository directory,
+# not from the working tree, so if you want to perform operations on
+# the working tree, you will have to adapt your code accordingly, e.g.
+# by adding "cd .." or using relative paths.
+
+if ! git update-index -q --ignore-submodules --refresh
+then
+	die "Up-to-date check failed"
+fi
+
+if ! git diff-files --quiet --ignore-submodules --
+then
+	die "Working directory has unstaged changes"
+fi
+
+# This is a rough translation of:
+#
+#   head_has_history() ? "HEAD" : EMPTY_TREE_SHA1_HEX
+if git cat-file -e HEAD 2>/dev/null
+then
+	head=HEAD
+else
+	head=$(git hash-object -t tree --stdin </dev/null)
+fi
+
+if ! git diff-index --quiet --cached --ignore-submodules $head --
+then
+	die "Working directory has staged changes"
+fi
+
+if ! git read-tree -u -m "$commit"
+then
+	die "Could not update working tree to new HEAD"
+fi
+</file>
+
+<file path="Banking_Application/.git/hooks/sendemail-validate.sample">
+#!/bin/sh
+
+# An example hook script to validate a patch (and/or patch series) before
+# sending it via email.
+#
+# The hook should exit with non-zero status after issuing an appropriate
+# message if it wants to prevent the email(s) from being sent.
+#
+# To enable this hook, rename this file to "sendemail-validate".
+#
+# By default, it will only check that the patch(es) can be applied on top of
+# the default upstream branch without conflicts in a secondary worktree. After
+# validation (successful or not) of the last patch of a series, the worktree
+# will be deleted.
+#
+# The following config variables can be set to change the default remote and
+# remote ref that are used to apply the patches against:
+#
+#   sendemail.validateRemote (default: origin)
+#   sendemail.validateRemoteRef (default: HEAD)
+#
+# Replace the TODO placeholders with appropriate checks according to your
+# needs.
+
+validate_cover_letter () {
+	file="$1"
+	# TODO: Replace with appropriate checks (e.g. spell checking).
+	true
+}
+
+validate_patch () {
+	file="$1"
+	# Ensure that the patch applies without conflicts.
+	git am -3 "$file" || return
+	# TODO: Replace with appropriate checks for this patch
+	# (e.g. checkpatch.pl).
+	true
+}
+
+validate_series () {
+	# TODO: Replace with appropriate checks for the whole series
+	# (e.g. quick build, coding style checks, etc.).
+	true
+}
+
+# main -------------------------------------------------------------------------
+
+if test "$GIT_SENDEMAIL_FILE_COUNTER" = 1
+then
+	remote=$(git config --default origin --get sendemail.validateRemote) &&
+	ref=$(git config --default HEAD --get sendemail.validateRemoteRef) &&
+	worktree=$(mktemp --tmpdir -d sendemail-validate.XXXXXXX) &&
+	git worktree add -fd --checkout "$worktree" "refs/remotes/$remote/$ref" &&
+	git config --replace-all sendemail.validateWorktree "$worktree"
+else
+	worktree=$(git config --get sendemail.validateWorktree)
+fi || {
+	echo "sendemail-validate: error: failed to prepare worktree" >&2
+	exit 1
+}
+
+unset GIT_DIR GIT_WORK_TREE
+cd "$worktree" &&
+
+if grep -q "^diff --git " "$1"
+then
+	validate_patch "$1"
+else
+	validate_cover_letter "$1"
+fi &&
+
+if test "$GIT_SENDEMAIL_FILE_COUNTER" = "$GIT_SENDEMAIL_FILE_TOTAL"
+then
+	git config --unset-all sendemail.validateWorktree &&
+	trap 'git worktree remove -ff "$worktree"' EXIT &&
+	validate_series
+fi
+</file>
+
+<file path="Banking_Application/.git/hooks/update.sample">
+#!/bin/sh
+#
+# An example hook script to block unannotated tags from entering.
+# Called by "git receive-pack" with arguments: refname sha1-old sha1-new
+#
+# To enable this hook, rename this file to "update".
+#
+# Config
+# ------
+# hooks.allowunannotated
+#   This boolean sets whether unannotated tags will be allowed into the
+#   repository.  By default they won't be.
+# hooks.allowdeletetag
+#   This boolean sets whether deleting tags will be allowed in the
+#   repository.  By default they won't be.
+# hooks.allowmodifytag
+#   This boolean sets whether a tag may be modified after creation. By default
+#   it won't be.
+# hooks.allowdeletebranch
+#   This boolean sets whether deleting branches will be allowed in the
+#   repository.  By default they won't be.
+# hooks.denycreatebranch
+#   This boolean sets whether remotely creating branches will be denied
+#   in the repository.  By default this is allowed.
+#
+
+# --- Command line
+refname="$1"
+oldrev="$2"
+newrev="$3"
+
+# --- Safety check
+if [ -z "$GIT_DIR" ]; then
+	echo "Don't run this script from the command line." >&2
+	echo " (if you want, you could supply GIT_DIR then run" >&2
+	echo "  $0 <ref> <oldrev> <newrev>)" >&2
+	exit 1
+fi
+
+if [ -z "$refname" -o -z "$oldrev" -o -z "$newrev" ]; then
+	echo "usage: $0 <ref> <oldrev> <newrev>" >&2
+	exit 1
+fi
+
+# --- Config
+allowunannotated=$(git config --type=bool hooks.allowunannotated)
+allowdeletebranch=$(git config --type=bool hooks.allowdeletebranch)
+denycreatebranch=$(git config --type=bool hooks.denycreatebranch)
+allowdeletetag=$(git config --type=bool hooks.allowdeletetag)
+allowmodifytag=$(git config --type=bool hooks.allowmodifytag)
+
+# check for no description
+projectdesc=$(sed -e '1q' "$GIT_DIR/description")
+case "$projectdesc" in
+"Unnamed repository"* | "")
+	echo "*** Project description file hasn't been set" >&2
+	exit 1
+	;;
+esac
+
+# --- Check types
+# if $newrev is 0000...0000, it's a commit to delete a ref.
+zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
+if [ "$newrev" = "$zero" ]; then
+	newrev_type=delete
+else
+	newrev_type=$(git cat-file -t $newrev)
+fi
+
+case "$refname","$newrev_type" in
+	refs/tags/*,commit)
+		# un-annotated tag
+		short_refname=${refname##refs/tags/}
+		if [ "$allowunannotated" != "true" ]; then
+			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+			echo "*** Use 'git tag [ -a | -s ]' for tags you want to propagate." >&2
+			exit 1
+		fi
+		;;
+	refs/tags/*,delete)
+		# delete tag
+		if [ "$allowdeletetag" != "true" ]; then
+			echo "*** Deleting a tag is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/tags/*,tag)
+		# annotated tag
+		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+		then
+			echo "*** Tag '$refname' already exists." >&2
+			echo "*** Modifying a tag is not allowed in this repository." >&2
+			exit 1
+		fi
+		;;
+	refs/heads/*,commit)
+		# branch
+		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
+			echo "*** Creating a branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/heads/*,delete)
+		# delete branch
+		if [ "$allowdeletebranch" != "true" ]; then
+			echo "*** Deleting a branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/remotes/*,commit)
+		# tracking branch
+		;;
+	refs/remotes/*,delete)
+		# delete tracking branch
+		if [ "$allowdeletebranch" != "true" ]; then
+			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	*)
+		# Anything else (is there anything else?)
+		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
+		exit 1
+		;;
+esac
+
+# --- Finished
+exit 0
+</file>
+
+<file path="Banking_Application/.git/info/exclude">
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+</file>
+
+<file path="Banking_Application/.git/logs/refs/heads/main">
+0000000000000000000000000000000000000000 8961fef3c0d7af392d40402086d463aa115f55f5 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785269728 +0530	clone: from https://github.com/Adithya0604/Banking_Application.git
+</file>
+
+<file path="Banking_Application/.git/logs/refs/remotes/origin/HEAD">
+0000000000000000000000000000000000000000 8961fef3c0d7af392d40402086d463aa115f55f5 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785269728 +0530	clone: from https://github.com/Adithya0604/Banking_Application.git
+</file>
+
+<file path="Banking_Application/.git/logs/refs/remotes/origin/main">
+8961fef3c0d7af392d40402086d463aa115f55f5 cf1442d23a9a5e7e866dab0068384e323d29e020 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785350214 +0530	fetch: forced-update
+cf1442d23a9a5e7e866dab0068384e323d29e020 5df0200eb20dc2218f137671b00ab70a19fe7137 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785356539 +0530	fetch: fast-forward
+5df0200eb20dc2218f137671b00ab70a19fe7137 22300891abff2fd1b3f0af7dba3622e1c099e138 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785439391 +0530	fetch: fast-forward
+22300891abff2fd1b3f0af7dba3622e1c099e138 4266c4aec387fb23e901a72e33fd4fc69509912f S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785440492 +0530	fetch: fast-forward
+4266c4aec387fb23e901a72e33fd4fc69509912f a57077867e35357c45511ae8ac5409c708df2ccd S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785862961 +0530	fetch: fast-forward
+a57077867e35357c45511ae8ac5409c708df2ccd 0bc5192ff843579f1f797b348792b35ef082cdca S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1786255704 +0530	fetch: fast-forward
+</file>
+
+<file path="Banking_Application/.git/logs/HEAD">
+0000000000000000000000000000000000000000 8961fef3c0d7af392d40402086d463aa115f55f5 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785269728 +0530	clone: from https://github.com/Adithya0604/Banking_Application.git
+8961fef3c0d7af392d40402086d463aa115f55f5 8961fef3c0d7af392d40402086d463aa115f55f5 S.Adithya Sharma <120710617+Adithya0604@users.noreply.github.com> 1785270163 +0530	checkout: moving from main to main
+</file>
+
+<file path="Banking_Application/.git/refs/heads/main">
+8961fef3c0d7af392d40402086d463aa115f55f5
+</file>
+
+<file path="Banking_Application/.git/refs/remotes/origin/HEAD">
+ref: refs/remotes/origin/main
+</file>
+
+<file path="Banking_Application/.git/refs/remotes/origin/main">
+0bc5192ff843579f1f797b348792b35ef082cdca
+</file>
+
+<file path="Banking_Application/.git/config">
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/Adithya0604/Banking_Application.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+	vscode-merge-base = origin/main
+</file>
+
+<file path="Banking_Application/.git/description">
+Unnamed repository; edit this file 'description' to name the repository.
+</file>
+
+<file path="Banking_Application/.git/FETCH_HEAD">
+0bc5192ff843579f1f797b348792b35ef082cdca		branch 'main' of https://github.com/Adithya0604/Banking_Application
+</file>
+
+<file path="Banking_Application/.git/HEAD">
+ref: refs/heads/main
+</file>
+
+<file path="Banking_Application/.git/packed-refs">
+# pack-refs with: peeled fully-peeled sorted 
+8961fef3c0d7af392d40402086d463aa115f55f5 refs/remotes/origin/main
+</file>
+
+<file path="Banking_Application/LICENSE">
+MIT License
+
+Copyright (c) 2026 S.Adithya Sharma
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</file>
+
+<file path="Banking_Application/README.md">
+# Banking_Application
+Production-grade core banking engine with an immutable double-entry ledger, strict ACID compliance, deterministic row locking, and zero-trust security on PostgreSQL.
+</file>
+
+<file path=".dockerignore">
+node_modules
+npm-debug.log
+.gitignore
+dist
+.env
+.git
+</file>
+
+<file path="Dockerfile">
+FROM node:20-alpine
+WORKDIR /app
+RUN apk add --no-cache python3 make g++
+COPY package*.json ./
+RUN npm install --include=dev
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+
+
+
+#Parameter	What it means	What happens if you skip/miss it?
+# FROM node:20-alpine	Downloads a mini Linux operating system with Node.js pre-installed.	Fatal error. Docker won't know what runtime/OS to base your container on.
+# WORKDIR /app	Creates and sets /app as the main working directory inside the container.	Your files get dumped into the root directory of the container, creating a messy filesystem collision.
+# COPY package*.json ./	Copies package.json and package-lock.json from your laptop into the container.	npm install won't know what packages/dependencies your Express app needs.
+# RUN npm install	Runs npm install inside the container to create node_modules.	Your app will crash instantly on launch with Cannot find module 'express'.
+# COPY . .	Copies all your remaining project code (app.ts, src/, etc.) into the container.	Your container will have node_modules, but zero application source code to execute.
+# EXPOSE 3000	Documents that port 3000 is used by the app inside the container.	Outside traffic/browser requests won't know which port the container is listening on.
+# CMD ["npm", "start"]	The default startup command that executes when the container boots up.	The container builds successfully, but instantly exits/stops because it has nothing to run.
+
+# Because we are using argon-2 for passcode hashing which requires python or node-gyp... which are heavy build. while this docker is trying to build with nodejs light weight image. it is throughting error. And also this argon-2 is not that good to use just replace it with sha256
+</file>
+
+<file path="src/config/database.ts">
+//Import libraries
+import { Pool } from "pg";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+// Following list env. variables
+const required_env_varibles = ["DB_HOST", "DB_USER", "DB_PASSWORD", "DB_NAME"];
+for (const env_var of required_env_varibles) {
+  if (!process.env[env_var]) {
+    throw new Error(
+      `Critical Config Erros: Envirnoment varible ${env_var} is missing...`,
+    );
+  }
+}
+
+// Implemented Connection Pool
+export const db = new Pool({
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT) || 5432,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  max: 20, //Conn. Channels
+  idleTimeoutMillis: 10000, //Idle Wait TimeOut
+  connectionTimeoutMillis: 2000, //Channel Connect TimeOut
+  ssl:
+    process.env.NODE_ENV === "production"
+      ? { rejectUnauthorized: true }
+      : false, // Security related to production or Staging/Development
+});
+
+// Connected to Postgres DB
+db.on("connect", () => {
+  console.log(`Postgresql Pool Connected Successfully.`);
+});
+
+// Error While Connecting To Postgres DB
+db.on("error", (error) => {
+  console.error(`Unexpected database error: ${error}`);
+  //process.exit(-1);
+});
+
+/*Handling The Failed Conn. Pool
+There is an sudden Interption then this function will take care off to clear the request & stops ccepting requests & clearts the connection pool & then exit.
+SIGINT & SIGTERM are Operating System commands. Used to terminate or stop. 
+*/
+const handleShutdown = async () => {
+  console.log(`Closing Connection Pool...`);
+  await db.end();
+  console.log(`Postgresql Pool Closed`);
+  process.exit(0);
+};
+
+process.on("SIGTERM", handleShutdown);
+process.on("SIGINT", handleShutdown);
+</file>
+
+<file path="src/controllers/auth.controller.ts">
+import { Request, Response, NextFunction } from "express";
+import { AuthServices, DuplicateUserError } from "../services/auth.services";
+
+export class AuthController {
+  private authService: AuthServices;
+
+  constructor() {
+    this.authService = new AuthServices();
+  }
+
+  /*Handle User Registeration */
+  register = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const Customer = await this.authService.registerUser(req.body);
+
+      res.status(200).json({
+        success: true,
+        message:
+          "User registered successfully. Please provide to KYC verification",
+        data: {
+          customorid: Customer.id,
+          email: Customer.email,
+          firstname: Customer.firstname,
+          lastname: Customer.lastname,
+          status: Customer.status,
+          CreatedAt: Customer.createdAt,
+        },
+      });
+    } catch (error) {
+      if (error instanceof DuplicateUserError) {
+        res.status(409).json({
+          success: false,
+          error: {
+            code: "DUPLICATE_ERROR",
+            message: error.message,
+          },
+        });
+        return;
+      }
+      next(error);
+    }
+  };
+}
+</file>
+
+<file path="src/controllers/login.controller.ts">
+import { Request, Response, NextFunction } from "express";
+import { LoginServices } from "../services/login.services";
+import { success } from "zod";
+
+export class LoginController {
+  private loginservices: LoginServices;
+
+  constructor() {
+    this.loginservices = new LoginServices();
+  }
+
+  Login = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const results = await this.loginservices.LoginUser(req.body);
+
+      res.status(200).json({
+        success: true,
+        message: `Login successful`,
+        data: results,
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
+}
+</file>
+
+<file path="src/middlewares/auth.middleware.ts">
+//Process
+/*
+1. Import REQUEST, response, next function from express.
+2. Import validation errors from JW T Web tokens.
+3. We need to write an asynchronous function which will be validating access token of a user this validations will be only in Middleware. We will extract the access token from headers where authorization will be bearer token.
+*/
+
+import { Request, Response, NextFunction } from "express";
+import jwt, { JsonWebTokenError, TokenExpiredError } from "jsonwebtoken";
+import "dotenv/config";
+
+// We have declared a global
+export interface UserPayload {
+  id: string;
+  email: string;
+  status: string;
+}
+
+declare global {
+  namespace Express {
+    interface Request {
+      user?: UserPayload;
+    }
+  }
+}
+
+export const autenticate = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): Promise<void> => {
+  try {
+    const authToken = req.headers.authorization;
+
+    if (!authToken || !authToken.startsWith("Bearer ")) {
+      res.status(400).json({
+        success: false,
+        error: {
+          code: "MISSING_TOKEN",
+          message:
+            "Authorization header missing or invalid format. Expected 'Bearer <token>'",
+        },
+      });
+      return;
+    }
+
+    const actualToken = authToken.split(" ")[1];
+
+    const decodeToken = jwt.verify(
+      actualToken,
+      process.env.JWT_SECRETKEY!,
+    ) as UserPayload;
+
+    req.user = {
+      id: decodeToken.id,
+      email: decodeToken.email,
+      status: decodeToken.status,
+    };
+    next();
+  } catch (error) {
+    if (error instanceof TokenExpiredError) {
+      res.status(401).json({
+        success: false,
+        error: {
+          code: "TOKEN_EXPIRED",
+          message: "Access token has expired. Please refresh your session.",
+        },
+      });
+      return;
+    }
+
+    if (error instanceof JsonWebTokenError) {
+      res.status(401).json({
+        success: false,
+        error: {
+          code: "INVALID_TOKEN",
+          message: "Access token signature is invalid or corrupted.",
+        },
+      });
+      return;
+    }
+
+    res.status(500).json({
+      success: false,
+      error: {
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Failed to authenticate request.",
+      },
+    });
+  }
+};
+</file>
+
+<file path="src/migration/001_phase1_schema.sql">
+-- Enable UUID extension if needed
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- 1. Customers Table
+CREATE TABLE IF NOT EXISTS customers (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    email VARCHAR(255) UNIQUE NOT NULL,
+    phone VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    status VARCHAR(30) NOT NULL DEFAULT 'PENDING_KYC',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Customer Credentials Table
+CREATE TABLE IF NOT EXISTS customer_credentials (
+    customer_id UUID PRIMARY KEY REFERENCES customers(id) ON DELETE CASCADE,
+    password_hash VARCHAR(255) NOT NULL,
+    failed_attempts INT DEFAULT 0,
+    locked_until TIMESTAMP WITH TIME ZONE NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 3. Customer Addresses Table
+CREATE TABLE IF NOT EXISTS customer_addresses (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    customer_id UUID NOT NULL REFERENCES customers(id) ON DELETE CASCADE,
+    address_type VARCHAR(20) NOT NULL DEFAULT 'RESIDENTIAL',
+    street_line1 VARCHAR(255) NOT NULL,
+    street_line2 VARCHAR(255),
+    city VARCHAR(100) NOT NULL,
+    state VARCHAR(100) NOT NULL,
+    postal_code VARCHAR(20) NOT NULL,
+    country VARCHAR(100) NOT NULL DEFAULT 'India',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 4. KYC Verifications Table
+CREATE TABLE IF NOT EXISTS kyc_verifications (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    customer_id UUID NOT NULL REFERENCES customers(id) ON DELETE CASCADE,
+    document_type VARCHAR(50) NOT NULL, -- e.g., TAX_IDENTIFIER, PASSPORT
+    document_hash VARCHAR(64) NOT NULL, -- SHA-256 hash of plain document ID
+    status VARCHAR(30) NOT NULL DEFAULT 'PENDING',
+    rejection_reason TEXT,
+    verified_at TIMESTAMP WITH TIME ZONE NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 5. Accounts Table
+CREATE TABLE IF NOT EXISTS accounts (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    account_number VARCHAR(34) UNIQUE NOT NULL, -- Standard routing / IBAN format
+    customer_id UUID NOT NULL REFERENCES customers(id) ON DELETE RESTRICT,
+    account_type VARCHAR(20) NOT NULL DEFAULT 'SAVINGS',
+    status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+    currency VARCHAR(3) NOT NULL DEFAULT 'INR',
+    cached_balance BIGINT NOT NULL DEFAULT 0, -- Stored in subunits (e.g. Paise/Cents)
+    version INT NOT NULL DEFAULT 1,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 6. Cards Table
+CREATE TABLE IF NOT EXISTS cards (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    account_id UUID NOT NULL REFERENCES accounts(id) ON DELETE RESTRICT,
+    card_number VARCHAR(16) UNIQUE NOT NULL, -- 16-digit string generated via Luhn Algorithm
+    cvv_hash VARCHAR(255) NOT NULL,
+    expiry_month INT NOT NULL,
+    expiry_year INT NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+</file>
+
+<file path="src/migration/002_phase2_schema.sql">
+-- 7. Refresh Token 
+CREATE TABLE IF NOT EXISTS refresh_tokens(
+id UUID PRIMARY key DEFAULT gen_random_uuid(),
+customer_id UUID NOT NULL REFERENCES customers(id) ON DELETE CASCADE,
+token_hash VARCHAR(64) UNIQUE NOT NULL, 
+family_id UUID NOT NULL,
+is_revoked BOOLEAN NOT NULL DEFAULT FALSE, 
+expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+user_agent TEXT,
+ip_address VARCHAR(45), 
+created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+--Fast lookup during POST /auth/refresh (O(1) speed)
+CREATE INDEX IF NOT EXISTS idx_refresh_tokens_hash ON refresh_tokens(token_hash);
+
+-- Fast lookup when revoking an entire session family during a breach
+CREATE INDEX IF NOT EXISTS idx_refresh_tokens_family on refresh_tokens(family_id);
+
+-- Fast lookup for "Log out of all devices" for a specific user
+CREATE INDEX IF NOT EXISTS idx_refresh_tokens_customer ON refresh_tokens(customer_id);
+</file>
+
+<file path=".env.example">
+
+</file>
+
+<file path=".gitignore">
+#node modules
+node_modules/
+dist/
+
+#environment file
+.env
+</file>
+
+<file path="docker-compose.yml">
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ${DB_CONTAINER_NAME}
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  
+  backend:
+    build: .
+    container_name: my_express_backend
+    ports:
+      - "3000:3000"
+    env_file: 
+      - .env                          
+    environment:
+      - DB_HOST=postgres
+    depends_on:
+      postgres: 
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+    driver: local
+</file>
+
+<file path="tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
+</file>
+
+<file path="src/repositories/login.repository.ts">
+import { db } from "../config/database";
+import { LoginUserInput } from "../schemas/login.schema";
+
+export interface UserDetails {
+  id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  password_hash: string;
+  status: string;
+}
+
+export class LoginRepository {
+  /*User Exists or not*/
+  async userExistorNot(email: string, phone: string): Promise<boolean> {
+    const query = `SELECT 1 FROM CUSTOMERS C WHERE EMAIL = $1 OR PHONE = $2 LIMIT 1`;
+    const result = await db.query(query, [email, phone]);
+    return (result.rowCount ?? 0) > 0;
+  }
+
+  /*If No: /1. Return User Not Exist/. /2. User Exists Check Email/Phone ==> Return One Column contains id & password */
+  async getUserDetails(input: LoginUserInput): Promise<UserDetails | null> {
+    const query = `SELECT C.ID, C.EMAIL, C.FIRST_NAME, C.LAST_NAME, CC.PASSWORD_HASH, C.STATUS FROM CUSTOMERS C LEFT JOIN CUSTOMER_CREDENTIALS CC ON C.ID = CC.CUSTOMER_ID WHERE EMAIL = $1 OR PHONE = $2 LIMIT 1`;
+    const results = await db.query(query, [
+      input.email || null,
+      input.phone || null,
+    ]);
+
+    if (results.rows.length === 0) return null;
+    return results.rows[0] as UserDetails;
+
+    //const row = results.rows[0];
+    // return {
+    //   id: row.ID,
+    //   email: row.Email,
+    //   firstname: row.Firstname,
+    //   lastname: row.lastname,
+    //   password_hash: row.password_hash,
+    //   Status: row.status,
+    // };
+  }
+}
+</file>
+
+<file path="src/repositories/user.repository.ts">
+import { db } from "../config/database";
+import { RegisterUserInput } from "../schemas/auth.schema";
+
+export interface CreatedCustomer {
+  id: string;
+  email: string;
+  firstname: string;
+  lastname: string;
+  status: string;
+  createdAt: Date;
+}
+
+export class UserRepository {
+  /*User Already Exist Or Not */
+  async existsByEmailOrPhone(email: string, phone: string): Promise<boolean> {
+    const query = `SELECT 1 FROM CUSTOMERS WHERE EMAIL = $1 OR PHONE = $2 LIMIT 1`;
+    const result = await db.query(query, [email, phone]);
+    return (result.rowCount ?? 0) > 0;
+  }
+
+  /*Create User In One Step */
+  async createCustomer(
+    input: RegisterUserInput,
+    passwordHash: string,
+  ): Promise<CreatedCustomer> {
+    const client = await db.connect();
+
+    try {
+      await client.query("BEGIN");
+
+      //Insert Into Customers
+      const InsertQuery = `Insert into Customers(email, phone, first_name, last_name, status)
+      Values($1, $2, $3, $4, 'PENDING_KYC')
+      RETURNING id, email, first_name, last_name, status, created_at`;
+      const InsertRes = await client.query(InsertQuery, [
+        input.email,
+        input.phone,
+        input.firstName,
+        input.lastName,
+      ]);
+
+      const Customer = InsertRes.rows[0];
+      console.log(Customer);
+
+      //Insert Customer Credentinals
+      const PassCodeQuery = `Insert into customer_credentials(customer_id, password_hash) Values($1, $2)`;
+      await client.query(PassCodeQuery, [Customer.id, passwordHash]);
+
+      //Insert into customer address
+      const CustomerAddressQuery = `Insert into customer_addresses(customer_id, street_line1, street_line2, city, state, postal_code, country)
+                                        Values($1, $2, $3, $4, $5, $6, $7)`;
+      await client.query(CustomerAddressQuery, [
+        Customer.id,
+        input.address.streetLine1,
+        input.address.streetLine2 || null,
+        input.address.city,
+        input.address.state,
+        input.address.postalCode,
+        input.address.country || "INDIA",
+      ]);
+
+      await client.query("COMMIT");
+
+      return {
+        id: Customer.id,
+        email: Customer.email,
+        firstname: Customer.first_name,
+        lastname: Customer.last_name,
+        status: Customer.status,
+        createdAt: Customer.created_at,
+      };
+    } catch (error) {
+      await client.query("ROLLBACK");
+      throw error;
+    } finally {
+      client.release();
+    }
+  }
+}
+</file>
+
+<file path="src/schemas/login.schema.ts">
+import { z } from "zod";
+
+export const LoginUserSchema = z
+  .object({
+    email: z.email("Invalid email address").or(z.literal("")).optional(),
+    phone: z
+      .string()
+      .length(10, "phone number is required")
+      .or(z.literal(""))
+      .optional(),
+    password: z
+      .string("password is required ")
+      .trim()
+      .min(8, "password must be at least 8 characters"),
+  })
+  .refine(
+    (data) =>
+      Boolean(data.email && data.email.trim().length > 0) ||
+      Boolean(data.phone && data.phone.trim().length > 0),
+    {
+      message: "Either Email Or Phone is required",
+      path: ["email"],
+    },
+  );
+
+export type LoginUserInput = z.infer<typeof LoginUserSchema>;
+</file>
+
+<file path="src/services/auth.services.ts">
+import argon2 from "argon2";
+import {
+  UserRepository,
+  CreatedCustomer,
+} from "../repositories/user.repository";
+import { RegisterUserInput } from "../schemas/auth.schema";
+
+export class DuplicateUserError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "DuplicateErrorMessage";
+  }
+}
+
+export class AuthServices {
+  private userRepository: UserRepository;
+  constructor() {
+    this.userRepository = new UserRepository();
+  }
+
+  async registerUser(input: RegisterUserInput): Promise<CreatedCustomer> {
+    const istaken = await this.userRepository.existsByEmailOrPhone(
+      input.email,
+      input.phone,
+    );
+
+    if (istaken) {
+      throw new DuplicateUserError(
+        `A Customer Already exist with this email or phone`,
+      );
+    }
+
+    const passwordHash = await argon2.hash(input.password, {
+      type: argon2.argon2id,
+      memoryCost: 2 ** 16,
+      timeCost: 3,
+      parallelism: 1,
+    });
+
+    const newCustomer = await this.userRepository.createCustomer(
+      input,
+      passwordHash,
+    );
+
+    return newCustomer;
+  }
+}
+</file>
+
+<file path="src/services/login.services.ts">
+import "dotenv/config";
+import argon2 from "argon2";
+import jwt from "jsonwebtoken";
+import { LoginRepository } from "../repositories/login.repository";
+import { LoginUserInput } from "../schemas/login.schema";
+
+//If User Status is SUSPENDED OR PENDING_VERIFICATION
+export class AccountRestricted extends Error {
+  constructor(message = "Your account is currently suspended or restricted. ") {
+    super(message);
+    this.name = "ACCOUNT_RESTRICTED";
+  }
+}
+//Wrong Email/Phone & password Combination
+export class InvalidCredentials extends Error {
+  constructor(message = "Invalid email or password combination.") {
+    super(message);
+    this.name = "INVALID_CREDENTIALS";
+  }
+}
+
+export class LoginServices {
+  private loginRepository: LoginRepository;
+  constructor() {
+    this.loginRepository = new LoginRepository();
+  }
+
+  async LoginUser(input: LoginUserInput) {
+    //fetch user by email or phone (single Db query)
+    const email = input.email ?? "";
+    const phone = input.phone ?? "";
+
+    const user = await this.loginRepository.getUserDetails(input);
+
+    if (!user || !user.password_hash) {
+      throw new InvalidCredentials();
+    }
+
+    if (user.status === "SUSPENDED" || user.status === "BLOCKED") {
+      throw new AccountRestricted();
+    }
+
+    const isPasswordValid = await argon2.verify(
+      user.password_hash,
+      input.password,
+    );
+    if (!isPasswordValid) {
+      throw new InvalidCredentials();
+    }
+
+    const accessToken = jwt.sign(
+      {
+        sub: user.id,
+        email: user.email,
+        status: user.status,
+      },
+      process.env.JWT_SECRET!,
+      { expiresIn: "15m" },
+    );
+
+    const refreshToken = jwt.sign(
+      {
+        sub: user.id,
+      },
+      process.env.JWT_SECRET!,
+      { expiresIn: "4d" },
+    );
+
+    return {
+      tokens: {
+        tokenType: "Bearer",
+        accessToken,
+        accessTokenExpiresIn: 900,
+        refreshToken,
+      },
+      user: {
+        id: user.id,
+        email: user.email,
+        firstname: user.first_name,
+        lastname: user.last_name,
+        status: user.status,
+      },
+    };
+  }
+}
+</file>
+
+<file path="src/middlewares/validate.middleware.ts">
+import { Request, Response, NextFunction } from "express";
+import { ZodError, ZodObject } from "zod";
+
+/*Need to validate the upcoming input */
+export const validate = (scheme: ZodObject) => {
+  return async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      // await scheme.parseAsync({
+      //   body: req.body,
+      //   query: req.query,
+      //   params: req.params,
+      // });
+      req.body = await scheme.parseAsync(req.body);
+      next();
+    } catch (error) {
+      if (error instanceof ZodError) {
+        const formattedErrors = error.issues.map((err) => ({
+          field: err.path.join("."),
+          message: err.message,
+        }));
+
+        console.log("formattedErrors:-", formattedErrors);
+        console.log("Errors inside:-", error);
+
+        res.status(400).json({
+          success: false,
+          error: {
+            code: "VALIDATION_ERROR",
+            message: "INVALID INPUT PAYLOAD",
+            details: formattedErrors,
+          },
+        });
+        return;
+      }
+      next(error);
+    }
+  };
+};
+
+/* EXPLATION */
+/* Simple, User input scheme is created then we declared it has a object. When user will fill that form and click submit or proceed with Onboarding flow. then we have to validate the user input details.
+So, we created a simple middleware for that input payload. Input payload comes to backed there are few other components which it loops in. We will check that too like params etc. Just we need TRUE or FALSE.
+If input payload will be validated inside middleware then we will send it forward with next function. If not, Just return the error saying worng format.        */
+</file>
+
+<file path="src/routes/auth.routes.ts">
+import { Router } from "express";
+import { AuthController } from "../controllers/auth.controller";
+import { validate } from "../middlewares/validate.middleware";
+import { RegisterUserSchema } from "../schemas/auth.schema";
+import { LoginUserSchema } from "../schemas/login.schema";
+import { LoginController } from "../controllers/login.controller";
+import { autenticate } from "../middlewares/auth.middleware";
+
+const router = Router();
+const authController = new AuthController();
+const loginController = new LoginController();
+
+router.post("/register", validate(RegisterUserSchema), authController.register);
+router.post("/login", validate(LoginUserSchema), loginController.Login);
+export default router;
+</file>
+
+<file path="src/schemas/auth.schema.ts">
+import { z } from "zod";
+
+// *** Created UserSchema from backend view point. The Form which we create in UI will be contaning this input parameters which we are validating from here ***//
+//*** We are using Zod which is very clear and then exporting the Object.***/
+export const RegisterUserSchema = z.object({
+  body: z.object({
+    firstName: z.string().min(3, "First name is required"),
+    lastName: z.string().min(3, "Last name is required"),
+    email: z.email("email is required"),
+    phone: z.string().min(10, "phone number is required"),
+    password: z
+      .string()
+      .min(8, "password is required")
+      .max(16, "LIMIT Exceded"),
+    address: z.object({
+      streetLine1: z
+        .string()
+        .min(8, "Address is required")
+        .max(250, "Limit Exceded"),
+      streetLine2: z.string().optional(),
+      city: z.string().min(3, "city name is required"),
+      state: z.string().min(3, "state name is required"),
+      postalCode: z.string().min(6, "postalCode name is required"),
+      country: z.string().default("India"),
+    }),
+  }),
+});
+
+/* Exporting UserSchema with Type */
+export type RegisterUserInput = z.infer<typeof RegisterUserSchema>["body"];
+
+//*** Explicitly showing
+// RegisterUserSchema
+//         |
+//         └── body
+//              |
+//              ├── name: string
+//              ├── email: string
+//              └── password: string
+//"What is the type of this Zod schema variable?"
+//z.infer converts a Zod schema into a TypeScript type.
+//export type RegisterUserInput = z.infer<typeof RegisterUserSchema>["body"];
+//is equivalent to writing:
+// export type RegisterUserInput = {
+//   name: string;
+//   email: string;
+//   password: string;
+// };
+// ***/
+</file>
+
+<file path="package.json">
+{
+  "name": "core-banking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "argon2": "^0.45.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.22.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.1.2",
+    "@types/pg": "^8.20.0",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
+</file>
+
+<file path="README.md">
+Errors: 
+Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+Type 'undefined' is not assignable to type 'string'.
+Solution: We need to use the fallback of every possible case. So, there will not be a blocker for the entire process. JUST A TYPESCRIPT ERROR.
+
+
+Errors:
+LOGIN & REGISTER API'S
+There are few cases which were breaking the api's error section. 
+Case 1: When a input parameter is missing the feild name should be visible but is is empty. 
+Case 2: When user account is in "SUSPENED"/"BLOCKED" or if that user credintinals are not matching then there are two error's which were establizhed but not working. 
+
+I have found out the bug it is inside the validate function. The validate is not sat perfeectly for validating. It should have global standards that any input parameters should come it's should handle that one. 
+
+formattedErrors:- [
+  {
+    field: '',
+    message: 'Invalid input: expected string, received undefined'
+  }
+]
+Errors inside:- ZodError: [
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "password"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  }
+]
+The issue is been solved. The middele ware which we are using that need's to be only parse of body & there were few correction inside the schema which we have to look into that in further process.
+</file>
+
+<file path="src/app.ts">
+//import express, .env, db
+import "dotenv/config";
+import express, { NextFunction, Request, Response } from "express";
+import { db } from "./config/database";
+import cors from "cors";
+import helmet from "helmet";
+import { rateLimit, ipKeyGenerator } from "express-rate-limit";
+import authRoutes from "./routes/auth.routes";
+
+const app = express();
+const PORT = process.env.PORT;
+
+/*Rules to talk with API's. CPS(Content_sercurity_policy), XSS(Scripts), etc. Basically, How should all other to be behaving while they talk to my API. */
+app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
+
+/*Who are suppose to talk with my API */
+app.use(
+  cors({
+    origin: process.env.AllowedOrigin ?? "",
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
+    credentials: true,
+  }),
+);
+
+//Global Limter For All Public API's
+const globalLimit = rateLimit({
+  //windowTime
+  windowMs: 60 * 15 * 1000,
+  //Limit per Window For Each IP
+  limit: 10,
+  //Rate Limit Headers Return
+  standardHeaders: "draft-7",
+  //legacyheaders
+  legacyHeaders: false,
+  //Identification of IP.
+  keyGenerator: (req) => ipKeyGenerator(req.ip ?? ""),
+  //message for that requests.
+  handler: (req, res) => {
+    res.status(429).json({
+      success: false,
+      error: {
+        code: "TOO_MANY_REQUEST",
+        message: "Too Many Requests. Please Try Again After 15 Min...",
+      },
+    });
+  },
+  skipSuccessfulRequests: true,
+});
+
+//OTP Limter
+const otpLimit = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  limit: 5,
+  standardHeaders: "draft-7",
+  legacyHeaders: false,
+  keyGenerator: (req) => ipKeyGenerator(req.ip ?? ""),
+  handler: (req, res) => {
+    res.status(429).json({
+      success: false,
+      error: {
+        code: "TOO_MANY_REQUESTS",
+        message: "Limit Crossed. Wait until cooling peroid...",
+      },
+    });
+  },
+  skipSuccessfulRequests: true,
+});
+
+// Payments Limiters
+
+//Security Purpose
+app.use(express.json({ strict: false }));
+app.disable("x-powered-by");
+
+//Logging Middleware
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+    console.log(
+      `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} -> ${res.statusCode} (${duration}ms)`,
+    );
+  });
+  next();
+});
+
+//Health Check For DB.
+app.get("/health", async (req: Request, res: Response) => {
+  try {
+    const dbcheck = await db.query(
+      "SELECT NOW() AS CURRENT_TIME, CURRENT_DATABASE() AS DB_NAME;",
+    );
+
+    res.status(200).json({
+      status: "UP",
+      timeStamp: dbcheck.rows[0].CURRENT_TIME,
+      database: dbcheck.rows[0].DB_NAME,
+      message: "Core Banking Engine API Working",
+    });
+  } catch (error: any) {
+    console.error(`Health Check Gone Worng... ${error}`);
+    res.status(500).json({
+      status: "DOWN",
+      error: "Database Connection Gone Worng...",
+      details: error.message,
+    });
+  }
+});
+
+//User Creation
+app.use("/api/v1/auth", globalLimit, authRoutes);
+
+//Global Error hanlder
+app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
+  console.error(`[Internal Server Error]: ${err}`);
+  res.status(500).json({
+    success: false,
+    error: {
+      code: "INTERNAL_SERVER_ERROR",
+      message: err.message || "AN UNEXPECTED ERROR OCCURRED ON THE SERVER.",
+    },
+  });
+});
+
+//Port Listen
+app.listen(PORT, () => {
+  console.log(`Core Banking Running on http://localhost:${PORT}`);
+});
+
+export default app;
+</file>
+
+</files>

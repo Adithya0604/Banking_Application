@@ -73,6 +73,18 @@ const otpLimit = rateLimit({
 app.use(express.json({ strict: false }));
 app.disable("x-powered-by");
 
+//Logging Middleware
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+    console.log(
+      `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} -> ${res.statusCode} (${duration}ms)`,
+    );
+  });
+  next();
+});
+
 //Health Check For DB.
 app.get("/health", async (req: Request, res: Response) => {
   try {

@@ -4,3 +4,5 @@ dist/
 
 #environment file
 .env
+
+PROJECT_DOCS.md
