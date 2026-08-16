@@ -12,3 +12,43 @@
   },
   "include": ["src/**/*"]
 }
+
+
+/*{
+  "compilerOptions": {
+    // 1. THE TRANSLATION ENGINE
+    // Which JS version to output. ES2022 is perfect for modern Node.js servers.
+    "target": "ES2022",
+    
+    // How files talk to each other (writing) AND how TS searches for them (reading). 
+    // Always keep these identical to avoid fake errors or server crashes.
+    "module": "Node16",
+    "moduleResolution": "Node16",
+
+    // 2. THE PHYSICAL PIPELINE
+    // Where your raw code lives.
+    "rootDir": "./src",
+    // Where the compiled, server-ready JS files go (keeps your folders clean).
+    "outDir": "./dist",
+
+    // 3. THE SAFETY NETS
+    // The most important rule: Forces you to write safe code and prevents embarrassing crashes.
+    "strict": true,
+    
+    // Blocks you from typing 'user' instead of 'User'. 
+    // Works fine on Mac/Windows, but crashes instantly on Linux servers.
+    "forceConsistentCasingInFileNames": true,
+
+    // 4. THE GLUE & SPEED HACKS
+    // The magic glue that lets you easily import older internet packages without weird syntax.
+    "esModuleInterop": true,
+    
+    // Tells the compiler to ONLY check your code, not the thousands of files in node_modules. 
+    // Makes the build insanely fast and hides internet code errors.
+    "skipLibCheck": true
+  },
+  
+  // Applies all the rules above strictly to the files inside the src folder.
+  "include"
+}
+  */

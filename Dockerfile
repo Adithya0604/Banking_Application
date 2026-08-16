@@ -3,6 +3,7 @@ WORKDIR /app
 RUN apk add --no-cache python3 make g++
 COPY package*.json ./
 RUN npm install --include=dev
+RUN apk del --no-cache python3 make g++
 COPY . .
 RUN npm run build
 EXPOSE 3000
