@@ -38,13 +38,16 @@ export class RefreshTokenService {
   }
   //Controller will give me refreshtoken which will be passing to services where the main validation will take place.
   async rotateTokens(rawRefreshToken: string) {
-    //1. Verify token signture in-memory
+    console.log("rawRefreshToken:", rawRefreshToken);
+    //1. Verify token signture in-rawRefreshToken
     let decode: any;
+    console.log(`1. try block decode ${decode}`);
     try {
       decode = jwt.verify(rawRefreshToken, process.env.JWT_SECRET!);
+      console.log("2. try block decode:", JSON.stringify(decode));
     } catch (error) {
       throw new FailedRefreshTokenSignature(
-        "Refresh Token Signature is invalid or corrcupted.",
+        "Refresh token signature is invalid or corrupted.",
       );
     }
     //2. Hash input refreshtoken
@@ -52,9 +55,12 @@ export class RefreshTokenService {
       .createHash("sha256")
       .update(rawRefreshToken)
       .digest("hex");
+
+    console.log("OldRefreshTokenHash: ", OldRefreshTokenHash);
     const CheckingExistingRefreshToken =
       await this.refreshokenRepository.FindRefreshToken(OldRefreshTokenHash);
 
+    console.log("CheckingExistingRefreshToken: ", CheckingExistingRefreshToken);
     if (!CheckingExistingRefreshToken) {
       throw new UnauthroziedLogin("Refresh Token Not found. Please login");
     }
@@ -88,23 +94,25 @@ export class RefreshTokenService {
 
     const newRefreshToken = jwt.sign(
       {
-        sub: CheckingExistingRefreshToken.customer_id,
+        sub: CheckingExistingRefreshToken.id,
       },
       process.env.JWT_SECRET!,
-      { expiresIn: "7days" },
+      { expiresIn: "15days" },
     );
+
+    console.log("newRefreshToken:", newRefreshToken);
 
     const newToken_Hash = crypto
       .createHash("sha256")
       .update(newRefreshToken)
       .digest("hex");
-
+    console.log("newToken_Hash:", newToken_Hash);
     const newExpiresAt = new Date();
-    newExpiresAt.setDate(newExpiresAt.getDate() + 7);
+    newExpiresAt.setDate(newExpiresAt.getDate() + 15);
 
     //6. results
     await this.refreshokenRepository.RotateRefreshToken(
-      rawRefreshToken,
+      OldRefreshTokenHash,
       CheckingExistingRefreshToken.customer_id,
       newToken_Hash,
       CheckingExistingRefreshToken.family_id,

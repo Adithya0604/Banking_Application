@@ -16,7 +16,7 @@ export interface RefreshToken {
 export class RefreshTokenRepository {
   //FindRefreshToken. INPUT => Token_hash(RefreshToken + Sha256) => OUTPUT => Entire Row or null.
   async FindRefreshToken(Token_Hash: String): Promise<RefreshToken | null> {
-    const SearchQuery = `SELECT * FROM refresh_token WHERE token_hash = $1`;
+    const SearchQuery = `SELECT * FROM refresh_tokens WHERE token_hash = $1`;
     const Results = await db.query(SearchQuery, [Token_Hash]);
     return Results.rows[0] || null;
   }
@@ -37,12 +37,12 @@ export class RefreshTokenRepository {
       await client.query(`BEGIN`);
 
       await client.query(
-        `Update refresh_token set is_revoked = true, updated_at = now() where token_hash = $1`,
+        `Update refresh_tokens set is_revoked = true, updated_at = now() where token_hash = $1`,
         [Old_Token_Hash],
       );
-
+      console.log("Update has happend.");
       await client.query(
-        `Insert into refresh_token(Customer_id, token_hash, family_id, is_revoked, expires_at)values($1, $2, $3, $4, $5)`,
+        `Insert into refresh_tokens(Customer_id, token_hash, family_id, is_revoked, expires_at)values($1, $2, $3, $4, $5)`,
         [Customer_id, Token_Hash, Family_id, false, expires_at],
       );
 
@@ -58,7 +58,7 @@ export class RefreshTokenRepository {
   //Breach protection INPUT => Family_id => OUTPUT => ALL TOKEN MAPPED TO FAMILY_ID SHOULD BE REVOKED
   async revokeFamilyTokens(family_id: string): Promise<void> {
     await db.query(
-      `Update refresh_token set is_revoked = true, updated_at = Now() where family_id = $1`,
+      `Update refresh_tokens set is_revoked = true, updated_at = Now() where family_id = $1`,
       [family_id],
     );
   }

@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import {
   RefreshTokenService,
+  FailedRefreshTokenSignature,
   RefreshTokenSecurityBreach,
   UnauthroziedLogin,
 } from "../services/refresh.services";
@@ -19,9 +20,9 @@ export class RefreshTokenController {
   ): Promise<void> => {
     try {
       //1. RefreshToken from req.body
-      const { RefreshToken } = req.body;
+      const { refreshToken } = req.body;
 
-      const Result = await this.refreshTokenServices.rotateTokens(RefreshToken);
+      const Result = await this.refreshTokenServices.rotateTokens(refreshToken);
 
       res.status(200).json({
         success: true,
@@ -29,6 +30,16 @@ export class RefreshTokenController {
         data: Result,
       });
     } catch (error) {
+      if (error instanceof FailedRefreshTokenSignature) {
+        res.status(401).json({
+          success: false,
+          error: {
+            code: "INVALID_REFRESH_TOKEN_SIGNATURE",
+            message: error.message,
+          },
+        });
+        return;
+      }
       if (error instanceof UnauthroziedLogin) {
         res.status(401).json({
           success: false,
@@ -47,6 +58,7 @@ export class RefreshTokenController {
             message: error.message || null,
           },
         });
+        return;
       }
       next(error);
     }
