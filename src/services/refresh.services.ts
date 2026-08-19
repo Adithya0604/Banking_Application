@@ -41,7 +41,7 @@ export class RefreshTokenService {
     //1. Verify token signture in-memory
     let decode: any;
     try {
-      decode = jwt.verify(rawRefreshToken, process.env.JWT_REFRESH_SECRET!);
+      decode = jwt.verify(rawRefreshToken, process.env.JWT_SECRET!);
     } catch (error) {
       throw new FailedRefreshTokenSignature(
         "Refresh Token Signature is invalid or corrcupted.",
