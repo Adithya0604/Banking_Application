@@ -57,7 +57,7 @@ export class RefreshTokenRepository {
 
   //Breach protection INPUT => Family_id => OUTPUT => ALL TOKEN MAPPED TO FAMILY_ID SHOULD BE REVOKED
   async revokeFamilyTokens(family_id: string): Promise<void> {
-    await pool.query(
+    await db.query(
       `Update refresh_token set is_revoked = true, updated_at = Now() where family_id = $1`,
       [family_id],
     );
