@@ -1,8 +1,10 @@
 import "dotenv/config";
 import argon2 from "argon2";
 import jwt from "jsonwebtoken";
+import crypto from "crypto";
 import { LoginRepository } from "../repositories/login.repository";
 import { LoginUserInput } from "../schemas/login.schema";
+import { uuid } from "zod";
 
 //If User Status is SUSPENDED OR PENDING_VERIFICATION
 export class AccountRestricted extends Error {
@@ -65,6 +67,26 @@ export class LoginServices {
       process.env.JWT_SECRET!,
       { expiresIn: "4d" },
     );
+
+    //Should be adding one more step that sending the RT & At to the user before that just store that RT inside the Db with all the details.
+
+    const Storingrefreshtoken = crypto
+      .createHash("sha256")
+      .update(refreshToken)
+      .digest("hex");
+    console.log("Storingrefreshtoken: ", Storingrefreshtoken);
+    const Family_hash = crypto.randomUUID();
+
+    const expiresAt = new Date(Date.now() + 15 * 24 * 60 * 60 * 1000);
+    console.log("Family_hash: ", Family_hash);
+    const userrefreshtoken = await this.loginRepository.storeingRefreshToken(
+      user.id,
+      Storingrefreshtoken,
+      Family_hash,
+      expiresAt,
+    );
+
+    console.log("userrefreshtoken: ", userrefreshtoken);
 
     return {
       tokens: {

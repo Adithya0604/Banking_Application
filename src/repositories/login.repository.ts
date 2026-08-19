@@ -39,4 +39,35 @@ export class LoginRepository {
     //   Status: row.status,
     // };
   }
+
+  //Storing RT mapping user
+  async storeingRefreshToken(
+    customer_id: string,
+    storeingRefreshToken: string,
+    family_id: any,
+    expiresAt: Date,
+  ): Promise<any> {
+    const client = await db.connect();
+
+    try {
+      await client.query("BEGIN");
+
+      const query = `Insert into refresh_tokens(customer_id, token_hash, family_id, is_revoked, expires_at)
+                  values($1, $2, $3, $4, $5)`;
+      await client.query(query, [
+        customer_id,
+        storeingRefreshToken,
+        family_id,
+        false,
+        expiresAt,
+      ]);
+
+      await client.query("COMMIT");
+    } catch (error) {
+      await client.query("ROLLBACK");
+      throw error;
+    } finally {
+      client.release();
+    }
+  }
 }
