@@ -1,5 +1,5 @@
 import { Pool, PoolClient } from "pg";
-import { pool } from "../config/database";
+import { db } from "../config/database";
 
 //Main reason for creating this object: FindRefreshToken OutPut is row means which contains few colums. Instead of keeping Promise<any | null>. Just created an object which will replicate the same structure of the results
 export interface RefreshToken {
@@ -17,7 +17,7 @@ export class RefreshTokenRepository {
   //FindRefreshToken. INPUT => Token_hash(RefreshToken + Sha256) => OUTPUT => Entire Row or null.
   async FindRefreshToken(Token_Hash: String): Promise<RefreshToken | null> {
     const SearchQuery = `SELECT * FROM refresh_token WHERE token_hash = $1`;
-    const Results = await pool.query(SearchQuery, [Token_Hash]);
+    const Results = await db.query(SearchQuery, [Token_Hash]);
     return Results.rows[0] || null;
   }
 
@@ -31,7 +31,7 @@ export class RefreshTokenRepository {
     expires_at: Date,
   ): Promise<void> {
     //Using client instead of pool because many set of operations to be one in one go.
-    const client: PoolClient = pool.client();
+    const client: PoolClient = await db.connect();
 
     try {
       await client.query(`BEGIN`);
@@ -51,7 +51,7 @@ export class RefreshTokenRepository {
       await client.query(`ROLLBACK`);
       throw err;
     } finally {
-      client.release;
+      client.release();
     }
   }
 
