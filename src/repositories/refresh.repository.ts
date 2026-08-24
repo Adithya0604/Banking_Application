@@ -18,6 +18,7 @@ export class RefreshTokenRepository {
   async FindRefreshToken(Token_Hash: String): Promise<RefreshToken | null> {
     const SearchQuery = `SELECT * FROM refresh_tokens WHERE token_hash = $1`;
     const Results = await db.query(SearchQuery, [Token_Hash]);
+    console.log("repo", Results);
     return Results.rows[0] || null;
   }
 

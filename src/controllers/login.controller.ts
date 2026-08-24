@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import { LoginServices } from "../services/login.services";
-import { success } from "zod";
 
 export class LoginController {
   private loginservices: LoginServices;

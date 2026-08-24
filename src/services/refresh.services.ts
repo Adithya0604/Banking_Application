@@ -1,6 +1,6 @@
 import "dotenv/config";
 import jwt from "jsonwebtoken";
-import crypto from "crypto";
+import { GeneratingHash } from "../utils/hash.utils";
 import { RefreshTokenRepository } from "../repositories/refresh.repository";
 
 export class FailedRefreshTokenSignature extends Error {
@@ -51,16 +51,11 @@ export class RefreshTokenService {
       );
     }
     //2. Hash input refreshtoken
-    const OldRefreshTokenHash = crypto
-      .createHash("sha256")
-      .update(rawRefreshToken)
-      .digest("hex");
-
-    console.log("OldRefreshTokenHash: ", OldRefreshTokenHash);
+    const OldRefreshTokenHash = await GeneratingHash(rawRefreshToken);
+    console.log("OldRefreshTokenHash", OldRefreshTokenHash);
     const CheckingExistingRefreshToken =
       await this.refreshokenRepository.FindRefreshToken(OldRefreshTokenHash);
-
-    console.log("CheckingExistingRefreshToken: ", CheckingExistingRefreshToken);
+    console.log("CheckingExistingRefreshToken", CheckingExistingRefreshToken);
     if (!CheckingExistingRefreshToken) {
       throw new UnauthroziedLogin("Refresh Token Not found. Please login");
     }
@@ -94,20 +89,16 @@ export class RefreshTokenService {
 
     const newRefreshToken = jwt.sign(
       {
-        sub: CheckingExistingRefreshToken.id,
+        sub: CheckingExistingRefreshToken.customer_id,
       },
       process.env.JWT_SECRET!,
       { expiresIn: "15days" },
     );
 
-    console.log("newRefreshToken:", newRefreshToken);
+    const newToken_Hash = await GeneratingHash(newRefreshToken);
 
-    const newToken_Hash = crypto
-      .createHash("sha256")
-      .update(newRefreshToken)
-      .digest("hex");
-    console.log("newToken_Hash:", newToken_Hash);
     const newExpiresAt = new Date();
+
     newExpiresAt.setDate(newExpiresAt.getDate() + 15);
 
     //6. results
