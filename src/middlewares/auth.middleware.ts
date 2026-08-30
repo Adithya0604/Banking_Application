@@ -11,7 +11,7 @@ import "dotenv/config";
 
 // We have declared a global
 export interface UserPayload {
-  id: string;
+  sub: string;
   email: string;
   status: string;
 }
@@ -32,6 +32,7 @@ export const autenticate = async (
   try {
     const authToken = req.headers.authorization;
 
+    console.log(1);
     if (!authToken || !authToken.startsWith("Bearer ")) {
       res.status(400).json({
         success: false,
@@ -43,22 +44,28 @@ export const autenticate = async (
       });
       return;
     }
-
+    console.log(2);
     const actualToken = authToken.split(" ")[1];
-
+    console.log("actual token:", actualToken);
+    console.log(3);
     const decodeToken = jwt.verify(
       actualToken,
-      process.env.JWT_SECRETKEY!,
+      process.env.JWT_SECRET!,
     ) as UserPayload;
 
+    console.log("decode token:", decodeToken);
+    console.log(4);
     req.user = {
-      id: decodeToken.id,
+      sub: decodeToken.sub,
       email: decodeToken.email,
       status: decodeToken.status,
     };
+    console.log(5);
     next();
   } catch (error) {
+    console.log(6);
     if (error instanceof TokenExpiredError) {
+      console.log(7);
       res.status(401).json({
         success: false,
         error: {
@@ -70,6 +77,7 @@ export const autenticate = async (
     }
 
     if (error instanceof JsonWebTokenError) {
+      console.log(8);
       res.status(401).json({
         success: false,
         error: {
@@ -80,6 +88,7 @@ export const autenticate = async (
       return;
     }
 
+    console.log(9);
     res.status(500).json({
       success: false,
       error: {
