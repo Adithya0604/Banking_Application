@@ -1,6 +1,7 @@
 import "dotenv/config";
 import { kycDocumentsRepo } from "../repositories/kyc.repository";
 import { generateUrl } from "../utils/GenerateS3Url.utils";
+import { sendtoSqs } from "../services/sqs.service";
 // import fs from "fs";
 // import axios from "axios";
 
@@ -20,6 +21,12 @@ export type UploadPayload = {
   PanGeneratedPutUrl: string;
   AadharFrontGeneratedPutUrl: string;
   AadharBackGeneratedPutUrl: string;
+};
+
+export type verificationPayload = {
+  customer_id: string;
+  PanCardNumber: string;
+  AadharCardNumber: string;
 };
 
 export class kycDocumentsService {
@@ -53,26 +60,6 @@ export class kycDocumentsService {
     };
   }
 
-  // async UploadDocuments(input: UploadPayload): Promise<any> {
-  //   // const PanUpload = await generateUrl();
-  //   const UploadPayload = {
-  //     PanFile: input.PanFile,
-  //     AadharFrontFile: input.AadharFrontFile,
-  //     AadharBackFile: input.AadharBackFile,
-  //     PanGeneratedPutUrl: input.PanGeneratedPutUrl,
-  //     AadharFrontGeneratedPutUrl: input.AadharFrontGeneratedPutUrl,
-  //     AadharBackGeneratedPutUrl: input.AadharBackGeneratedPutUrl,
-  //   };
-  //   try {
-  //     const panfilebuffer = fs.readFileSync(UploadPayload.PanFile);
-  //     const fileupload = await axios.put(
-  //       UploadPayload.PanGeneratedPutUrl,
-  //       panfilebuffer,
-  //       { headers: { "Content-Type": "image/jpeg" } },
-  //     );
-  //   } catch (error) {}
-  // }
-
   async SubmitDocuments(input: Payload): Promise<any> {
     //1. The payload we got we have to turn s3 keys into hash & then store
     //2. After hashing that we will create another payload which will contains all the neccessarty details by which the db will be updated.
@@ -92,5 +79,19 @@ export class kycDocumentsService {
 
     await this.submitkycdocuments.submitKycDocuments(inputData);
     return { message: "Kyc Submitted Successfully" };
+  }
+
+  // Verification of documents after updating into DB.
+  async VerificationDocuments(input: verificationPayload): Promise<any> {
+    //Payload send into sqs queueing services
+    const intoSqsQueue = await sendtoSqs(input);
+
+    console.log(intoSqsQueue.MessageId);
+    //attach the message here
+    return {
+      status: "PROCESSING",
+      message: "The message is processing.",
+      queueMessageId: intoSqsQueue?.MessageId || "QUEUED",
+    };
   }
 }

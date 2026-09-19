@@ -86,4 +86,37 @@ export class KycDocumentsController {
       next(error);
     }
   };
+
+  verificationKyc = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ): Promise<any> => {
+    try {
+      const customer_id = req.user?.sub;
+
+      if (!customer_id) {
+        return res
+          .status(401)
+          .json({ success: false, message: "Unauthrozied User" });
+      }
+
+      const { PanCardNumber, AadharCardNumber } = req.body;
+      const verificationPayload = {
+        customer_id,
+        PanCardNumber,
+        AadharCardNumber,
+      };
+      const result =
+        await this.kycService.VerificationDocuments(verificationPayload);
+
+      console.log(result);
+      return res.status(202).json({
+        status: "success",
+        message: "Verification under going processing",
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
 }

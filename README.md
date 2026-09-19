@@ -29,3 +29,7 @@ Errors inside:- ZodError: [
   }
 ]
 The issue is been solved. The middele ware which we are using that need's to be only parse of body & there were few correction inside the schema which we have to look into that in further process.
+
+We have intergrated the AWS services inside the code. S3, SQS, lambda... Until now but we are going to integrate more ike sns VPA...
+For any AWS service to be integrated we need permission which will eat all of your time. S3 full access, Lambda Full access, sq full access. One more thing to keep in mind that is when you give the permision to the IAM Role user need to give the permission to that role that excute permission. Other wise he will not be able to connect between services and also give him all the permission related which i have been listed inside this SQSlambdaRolePermission policy. 
+

@@ -11,6 +11,7 @@ import { LogoutSchema } from "../schemas/logout.schema";
 import { KycDocumentsController } from "../controllers/kyc.controller";
 import { autenticate } from "../middlewares/auth.middleware";
 import { KycCards } from "../schemas/kyc.schema";
+import { AccountCreation } from "../controllers/account.controller";
 
 const router = Router();
 const authController = new AuthController();
@@ -18,6 +19,7 @@ const loginController = new LoginController();
 const refreshtokencontroller = new RefreshTokenController();
 const logOutController = new LogOutController();
 const kycdocumentsdontroller = new KycDocumentsController();
+const accountcreation = new AccountCreation();
 
 router.post("/register", validate(RegisterUserSchema), authController.register);
 router.post("/login", validate(LoginUserSchema), loginController.Login);
@@ -40,4 +42,10 @@ router.put(
   validate(KycCards),
   kycdocumentsdontroller.submitKyc,
 );
+router.post(
+  "/verificationKyc",
+  autenticate,
+  kycdocumentsdontroller.verificationKyc,
+);
+router.post("/AccountCreation", autenticate, accountcreation.account);
 export default router;
