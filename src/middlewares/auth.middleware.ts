@@ -23,7 +23,7 @@ declare global {
     }
   }
 }
-
+// This fucntion is not having an class so this is not protected like will the varibles or delarition will be exposed to other servcies and outside ?? will this effect any other repo or services.
 export const autenticate = async (
   req: Request,
   res: Response,

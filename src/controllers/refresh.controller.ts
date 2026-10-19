@@ -60,7 +60,7 @@ export class RefreshTokenController {
         });
         return;
       }
-      next(error);
+      next(error); // Will this be sending this error to the main global error handler or to the service.
     }
   };
 }

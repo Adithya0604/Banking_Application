@@ -29,7 +29,7 @@ export class AccountCreation {
         .json({ status: "success", message: JSON.stringify(results) });
     } catch (error) {
       if (error instanceof AccountVerificationPending) {
-        return res.status(400).json({
+        res.status(400).json({
           status: "success",
           error: {
             code: "Account_Verification_Pending",
@@ -39,7 +39,7 @@ export class AccountCreation {
         return;
       }
       if (error instanceof AccountNumberAlreadyExist) {
-        return res.status(400).json({
+        res.status(400).json({
           status: "success",
           error: {
             code: "Account_Number_Already_Exist",
@@ -49,7 +49,7 @@ export class AccountCreation {
         return;
       }
       if (error instanceof AccountInActive) {
-        return res.status(400).json({
+        res.status(400).json({
           status: "success",
           error: {
             code: "Account_Inactive",
