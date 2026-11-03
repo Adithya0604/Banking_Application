@@ -110,6 +110,7 @@ app.get("/health", async (req: Request, res: Response) => {
 
 //User Creation
 app.use("/api/v1/auth", globalLimit, authRoutes);
+// app.use("/api/v1/auth", authRoutes); // <-- This was kept because of limit is been making issue which we are load testing account creation API
 
 //Global Error hanlder
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {

@@ -48,4 +48,5 @@ router.post(
   kycdocumentsdontroller.verificationKyc,
 );
 router.post("/AccountCreation", autenticate, accountcreation.account);
+// router.post("/AccountCreation", accountcreation.account); // <-- this has been created because we are load testing account number logic. The autnication can create the issue that customer ID which we are getting from requests are not present inside DB
 export default router;
